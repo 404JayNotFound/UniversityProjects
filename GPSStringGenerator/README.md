@@ -21,7 +21,8 @@ The program does the following:
 3. [Technologies Used](#-technologies-used)
 4. [Project Requirements](#-project-requirements)
 5. [Example Usage](#-example-usage)
-7. [How to Contribute](#-how-to-contribute)
+
+---
 
 ## 📝 Overview
 
@@ -39,6 +40,8 @@ This program accepts GPS coordinates from the user in a specific format and gene
 - **Status**: Fixed value for simulation.
 - **Checksum**: Calculated based on the data string.
 
+---
+
 ## ⚙️ How It Works
 
 1. **Input for Latitude and Longitude**: The program prompts the user to enter the latitude and longitude values in the format DDMM.MMMM or DDDMM.MMMM.
@@ -47,15 +50,21 @@ This program accepts GPS coordinates from the user in a specific format and gene
 4. **Checksum Calculation**: The program calculates the checksum for the GPS string by XOR-ing all characters in the string.
 5. **Output**: The final GPS string with the checksum is displayed to the user.
 
+---
+
 ## 💻 Technologies Used
 
 - **C**: The program is written in C, utilizing basic input/output functions and string manipulation to generate the GPS string.
 - **Standard Libraries**: The program uses standard libraries such as `stdio.h`, `string.h`, and `stdlib.h` for input/output operations, string formatting, and general functionality.
 
+---
+
 ## 📋 Project Requirements
 
 - A C compiler (e.g., GCC) to compile the code.
 - Basic knowledge of GPS coordinate formatting and the NMEA standard.
+
+---
 
 ## 🎯 Example Usage
 
@@ -65,9 +74,10 @@ Enter longitude (format: DDDMM.MMMM): 12213.1234 <br>
 Enter longitude direction (E/W): W <br>
 Formatted GPS String: $GPGLL,3713.1234,N,12213.1234,W,225444,A,@57
 
-## 📚 How to Contribute
+---
 
-Feel free to fork this repository, submit issues, or make pull requests if you find bugs or have suggestions for improvements! 🙂
+## 💬 Contact
+Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
 
 ## Contributors
 - [Jamie O'Connor](https://github.com/404JayNotFound)
