@@ -10,6 +10,8 @@
 7. [Code Description](#code-description)
 8. [Setup Instructions](#setup-instructions)
 9. [Future Improvements](#future-improvements)
+10. [Contact](#-contact)
+11. [Contributors](#-contributors)
 
 ---
 
