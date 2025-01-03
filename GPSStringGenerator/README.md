@@ -21,6 +21,8 @@ The program does the following:
 3. [Technologies Used](#-technologies-used)
 4. [Project Requirements](#-project-requirements)
 5. [Example Usage](#-example-usage)
+6. [Contact](#-contact)
+7. [Contributors](#-contributors)
 
 ---
 
