@@ -80,4 +80,4 @@ Current state of Port B: 10100000 (0xA0)
 Feel free to explore, contribute, or reach out for questions regarding the project. You can contact me through GitHub or email for further inquiries.
 
 ## **Contributors**  
-- Jamie O'Connor
+- [Jamie O'Connor](https://github.com/404JayNotFound)
