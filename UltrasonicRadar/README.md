@@ -67,17 +67,21 @@ This project uses the following components to build the radar system:
   - A **push button** could be used for additional user input, such as manually resetting the system, pausing the scan, or switching modes.
 
 ### 💰 **Bill of Materials**
-| Item                | Quantity | Description                  | Estimated Cost (EUR) |
-|---------------------|----------|------------------------------|-----------------------|
-| Arduino Uno         | 1        | Microcontroller Board        | 15 - 25              |
-| HC-SR04             | 1        | Ultrasonic Sensor            | 3 - 7                |
-| Micro Servo (9g)    | 1        | Motor for Rotation           | 6 - 8                |
-| I2C LCD (16x2)      | 1        | Display Module               | 4 - 6                |
-| LED                 | 1        | Through-Hole Indicator       | 0.05                 |
-| 220Ω Resistor       | 1        | For LED Current Limiting     | 0.02                 |
-| Potentiometer       | 1        | Adjustable Resistance        | 1.00                 |
-| Push Button         | 1        | Momentary Contact Switch     | 0.28                 |
-| 1Ω Resistor         | 1        | Used for Grounding LCD       | 0.05                 |
+<div align="center">
+  
+  | Item                | Quantity | Description                  | Estimated Cost (EUR) |
+  |---------------------|----------|------------------------------|-----------------------|
+  | Arduino Uno         | 1        | Microcontroller Board        | 15 - 25              |
+  | HC-SR04             | 1        | Ultrasonic Sensor            | 3 - 7                |
+  | Micro Servo (9g)    | 1        | Motor for Rotation           | 6 - 8                |
+  | I2C LCD (16x2)      | 1        | Display Module               | 4 - 6                |
+  | LED                 | 1        | Through-Hole Indicator       | 0.05                 |
+  | 220Ω Resistor       | 1        | For LED Current Limiting     | 0.02                 |
+  | Potentiometer       | 1        | Adjustable Resistance        | 1.00                 |
+  | Push Button         | 1        | Momentary Contact Switch     | 0.28                 |
+  | 1Ω Resistor         | 1        | Used for Grounding LCD       | 0.05                 |
+  
+</div>
 
 ---
 
@@ -87,7 +91,12 @@ This project uses the following components to build the radar system:
   
 - **Python**:
   - If using a Python-based visualizer, the Python script reads the serial data sent from the Arduino and displays the radar-like plot using libraries such as **Matplotlib**.
-
+  - The required libraries can be installed by running:
+    
+  ```
+  pip install -r requirements.txt
+  ```
+    
 ---
 
 ## 🔌 **Circuit Design**
