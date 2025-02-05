@@ -125,17 +125,15 @@ To use the Google Drive API within the Python code for storing sensor data, you 
 
 1. Install Python (version 3.x) and necessary libraries:
     ```bash
-    pip install pyserial pandas plotly dash google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+    pip install -r requirements.txt
     ```
 2. Place your `credentials.json` file (from Google Developer Console) in the project directory.
 3. Run the Python script, `DataToGoogleDrive.py` to start logging data from the Arduino and upload it to **Google Drive**.
 
 ## Dash Setup
 
-1. Install the necessary Dash libraries:
-    ```bash
-    pip install dash
-    ```
+1. Install the necessary libraries if not done so already.
+
 2. Set up the Dash application by running the `SensorDashboard.py` script. This will start a local server to host the real-time monitoring dashboard.
 
 ## Set up Automatic Start of Python Script Using systemd
