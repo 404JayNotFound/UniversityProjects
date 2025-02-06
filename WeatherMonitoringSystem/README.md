@@ -1,6 +1,8 @@
 ## 🌱 Environmental Monitoring System with Arduino & Google Drive Integration 🌍
 
-This project involves an **Environmental Monitoring System** that collects data from various sensors and stores it in a CSV file. The data is then automatically uploaded to **Google Drive** for easy access and future analysis. The system is built using **Arduino**, **Python**, **Dash**, and **Google API**. The sensors used are a **Photoresistor**, **MQ135 gas sensor**, and **DHT11 temperature & humidity sensor**.
+This project involves an **Environmental Monitoring System** that collects data from various sensors and stores it in a CSV file. The data is then automatically uploaded to **Google Drive** for easy access and future analysis. The system is built using **Arduino**, **Python**, **Dash**, and **Google API**. The sensors used are a **Photoresistor**, **MQ135 gas sensor**, and **DHT11 temperature & humidity sensor**. 
+
+**For a full comprehensive breakdown and in-depth analysis of the entire project, including its entire development process, the set goals, and more, refer to the** [Project Report](https://github.com/404JayNotFound/UniversityProjects/raw/main/WeatherMonitoringSystem/EnvironmentalMonitoringSystemESTProjectReport.pdf)
 
 ---
 ## 📋 Table of Contents
@@ -56,8 +58,11 @@ This project integrates data collection, storage, and real-time monitoring using
 ## 🧑‍💻 How It Works
 
 Below shows the basic system architecture, which illustrates the flow of data from the sensors through the Arduino, processed and logged by the Python script, and then stored on Google Drive for real-time monitoring and visualization via the Dash application. 
+<div align="center">
 
 ![Screenshot 2025-01-06 195802](https://github.com/user-attachments/assets/2620b366-df36-4a94-9185-6aaba7b9a749)
+
+</div>
 
 ### Data Collection
 
@@ -76,9 +81,11 @@ Below shows the basic system architecture, which illustrates the flow of data fr
 ### Real-Time Monitoring
 
 - The **Dash application** continuously pulls the latest data from **Google Drive** and plots it in **real-time graphs** for easy visualization as seen in the example below.
-
+<div align="center">
+  
 ![Screenshot 2025-01-06 202436](https://github.com/user-attachments/assets/67397d5d-e181-456b-be03-25a13b383fa6)
 
+</div>
 
 ---
 ## 🌐 Google Drive Credentials
@@ -287,6 +294,7 @@ While the current implementation showcases the core functionality, there is sign
 ## 🛠 Purchase Links for Components Used
 
 The following hardware components are used for this project. You can purchase them from the provided links:
+<div align="center">
 
 | Component                        | Description                                        | Purchase Link                                                                                                                                                 |
 |----------------------------------|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -300,6 +308,8 @@ The following hardware components are used for this project. You can purchase th
 | **Raspberry Pi 3B**               | The computing platform to run the Python scripts.   | [Raspberry Pi 3B - Amazon](https://www.amazon.com/Raspberry-Pi-Model-Board-Plus/dp/B0BNJPL4MW)                                                                                             |
 | **MicroSD Card (32GB)**          | Storage for the Raspberry Pi OS and files.          | [MicroSD Card - Amazon](https://www.amazon.com/Amazon-Basics-microSDXC-Memory-Adapter/dp/B08TJRVWV1)                                                                                                |
 
+</div>
+
 > **Note:** Please verify the specifications and compatibility before purchasing. Always check the most updated product page for current availability.
 
 
@@ -309,4 +319,6 @@ Feel free to explore, or reach out for questions. You can contact me via GitHub 
 
 ## Contributors
 - [Jamie O'Connor](https://github.com/404JayNotFound)
+- Cathal O'Regan
+- Alan O'Connell
 
