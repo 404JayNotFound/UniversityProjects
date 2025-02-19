@@ -76,7 +76,11 @@ The robot's control system is based on **Subsumption Architecture**, which organ
 - **Behavior Modules**: Each module corresponds to a specific task, such as movement, obstacle avoidance, or light response.
 - **Triggering Events**: Sensors activate behaviors based on predefined thresholds.
 
+<div align="center">
+
 ![Screenshot 2025-01-08 151653](https://github.com/user-attachments/assets/7444043a-1b32-48fa-bb1c-edb64df3e35d)
+
+</div>
 
 ---
 
