@@ -4,7 +4,7 @@ LABCENTER PROTEUS TOOL INFORMATION FILE
 In case of difficulty, please e-mail support@labcenter.co.uk
 
 Tool set up for Proteus layout 'elecPro25Oscilloscope.pdsprj'.
-CADCAM generated at 19:03:02 on Monday 10 March 2025.
+CADCAM generated at 19:07:48 on Monday 10 March 2025.
 
 File List
 ---------
