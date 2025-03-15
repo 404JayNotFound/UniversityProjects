@@ -69,7 +69,7 @@ Each project in this repository contains:
 - **Instructions**: Setup guides and usage instructions for each project.
 
 ## 💬 Contact
-Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
+Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project. 
 
 ## Contributors
 - [Jamie O'Connor](https://github.com/404JayNotFound)
