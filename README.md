@@ -49,7 +49,7 @@ Below are some of the tools, platforms, and technologies that have been used acr
 - **Java**: Used for high-level control in robotics architecture, sensor integration, and system communication, utilizing frameworks like LeJOS EV3.
   
 ### **Design & Simulation Tools**
-- **Proteus**: Used for simulating embedded systems and testing microcontroller circuits.
+- **Proteus**: Used for simulating embedded systems, testing microcontroller circuits and PCB Design.
 - **Tinkercad**: An online platform for designing and simulating simple circuits, especially useful for rapid prototyping and beginner-friendly projects.
   
 ### **Microcontrollers & Hardware**
