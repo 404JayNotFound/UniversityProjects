@@ -57,7 +57,7 @@ This program accepts GPS coordinates from the user in a specific format and gene
 ## 💻 Technologies Used
 
 - **C**: The program is written in C, utilizing basic input/output functions and string manipulation to generate the GPS string.
-- **Standard Libraries**: The program uses standard libraries such as `stdio.h`, `string.h`, and `stdlib.h` for input/output operations, string formatting, and general functionality.
+- **Standard Libraries**: The program uses standard libraries such as `stdio.h`, `string.h`, `ctype.h` and `stdlib.h` for input/output operations, string formatting, and general functionality.
 
 ---
 
@@ -70,11 +70,13 @@ This program accepts GPS coordinates from the user in a specific format and gene
 
 ## 🎯 Example Usage
 
-Enter latitude (format: DDMM.MMMM): 3713.1234 <br>
-Enter latitude direction (N/S): N <br>
-Enter longitude (format: DDDMM.MMMM): 12213.1234 <br>
-Enter longitude direction (E/W): W <br>
+```
+Enter latitude (format: DDMM.MMMM): 3713.1234
+Enter latitude direction (N/S): N
+Enter longitude (format: DDDMM.MMMM): 12213.1234
+Enter longitude direction (E/W): W
 Formatted GPS String: $GPGLL,3713.1234,N,12213.1234,W,225444,A,@57
+```
 
 ---
 
