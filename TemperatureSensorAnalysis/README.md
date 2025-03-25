@@ -1,0 +1,3 @@
+# LABVIEW-Sensor Response Comparison
+
+Design a LabVIEW program that compares the speed of response of the LM35 temperature sensor installed on the sensor board with the thermistor supplied to you. This is an NTC, 22k, (Farnell:1672386). Your system should use the thermistor in a potential divider. The program should display both the voltage produced by the sensor on pins 1 of J2 and the thermistor voltage. It should then ask the user to hold both sensors and display the changing output voltages on a graph. Your program should indicate which sensor reading started to rise first and the rate of change of each voltage.
