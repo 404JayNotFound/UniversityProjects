@@ -138,8 +138,12 @@ The PCB design for the Servo Ultrasonic Radar System incorporates the following 
 - **LED Indicator**: The PCB will include a 220Ω current-limiting resistor for the **LED**, connected to a GPIO pin on the Arduino for proximity alerts.
 - **Optional Components**: There will be headers for optional components such as the **potentiometer** for adjusting the proximity threshold and the **push button** for manual control.
 
- ![Screenshot 2025-01-01 165128](https://github.com/user-attachments/assets/70411a95-9324-4fa0-9b60-1dc8829dd97a)
- ![Screenshot 2025-01-01 170439](https://github.com/user-attachments/assets/3fee31d4-aed2-4d40-9930-70c9ceeeb41f)
+<div align="center">
+  
+  ![Screenshot 2025-01-01 165128](https://github.com/user-attachments/assets/70411a95-9324-4fa0-9b60-1dc8829dd97a)
+  ![Screenshot 2025-01-01 170439](https://github.com/user-attachments/assets/3fee31d4-aed2-4d40-9930-70c9ceeeb41f)
+
+</div>
  
 ---
 
