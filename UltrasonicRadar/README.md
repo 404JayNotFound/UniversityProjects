@@ -1,5 +1,23 @@
 # 🚀 **Ultrasonic Radar System**
 
+## 🧭 **Overview**
+The **Ultrasonic Radar System** is a real-time system designed to simulate radar functionality using an **Arduino Uno** microcontroller. By integrating an **HC-SR04 ultrasonic sensor**, a **micro servo motor**, and an **I2C LCD display**, the system is capable of scanning a 180° range, measuring distances to objects, and displaying the results in real-time.
+
+The system operates by rotating the ultrasonic sensor using the micro servo, emitting ultrasonic pulses to detect nearby objects, and calculating distances using the time-of-flight method. This data is then displayed on an LCD and can be transmitted via serial communication for external visualization.
+
+This project is an excellent platform for understanding principles such as **distance measurement**, **servo control**, and **sensor integration**. It can be applied in various fields including robotics, IoT, and automation.
+
+<div align="center">
+
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) 
+![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+
+</div>
+
+---
+
 ## 📑 **Table of Contents**
 1. [Overview](#overview)
 2. [Features](#features)
@@ -12,15 +30,6 @@
 9. [Future Improvements](#future-improvements)
 10. [Contact](#-contact)
 11. [Contributors](#-contributors)
-
----
-
-## 🧭 **Overview**
-The **Ultrasonic Radar System** is a real-time embedded system designed to simulate radar functionality using an **Arduino Uno** microcontroller. By integrating an **HC-SR04 ultrasonic sensor**, a **micro servo motor**, and an **I2C LCD display**, the system is capable of scanning a 180° range, measuring distances to objects, and displaying the results in real-time.
-
-The system operates by rotating the ultrasonic sensor using the micro servo, emitting ultrasonic pulses to detect nearby objects, and calculating distances using the time-of-flight method. This data is then displayed on an LCD and can be transmitted via serial communication for external visualization.
-
-This project is an excellent platform for understanding principles such as **distance measurement**, **servo control**, and **sensor integration**. It can be applied in various fields including robotics, IoT, and automation.
 
 ---
 
