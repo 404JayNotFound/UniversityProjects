@@ -4,6 +4,8 @@ Welcome to my repository! This repository hosts a variety of projects that were 
 
 The projects here reflect the culmination of theory, hands-on learning, and problem-solving techniques learned throughout my academic journey. You will find well-documented code, schematics, simulations, and detailed explanations of each project, along with the tools and technologies used.
 
+---
+
 ## Table of Contents
 - [Overview](#overview)
 - [Project Areas](#project-area)
@@ -11,6 +13,8 @@ The projects here reflect the culmination of theory, hands-on learning, and prob
 - [How to Use](#how-to-use)
 - [Contact](#contact)
 - [Contributors](#contributors)
+
+---
 
 ## 🚀 Project Areas
 This repository is divided into several key areas of Electronic Engineering:
@@ -40,6 +44,8 @@ This repository is divided into several key areas of Electronic Engineering:
    - **Cloud Integration**:  
      - Some projects involve cloud platforms for data logging and remote monitoring.
 
+---
+
 ## 🛠️ Tools & Technologies
 Below are some of the tools, platforms, and technologies that have been used across my projects:
 
@@ -61,12 +67,16 @@ Below are some of the tools, platforms, and technologies that have been used acr
 - **I2C, UART**: Common communication protocols for microcontroller communication with sensors and peripherals.
 - **Bluetooth, Wi-Fi,**: Wireless communication protocols implemented for IoT devices.
 
+---
+
 ## 📝 How to Use
 Each project in this repository contains:
 - **Source Code**: Python scripts, C/C++ code for microcontrollers, and related files.
 - **Documentation**: Detailed explanations of the project objectives, functionality, and results.
 - **Schematic Diagrams**: Circuit designs and PCB layouts (where applicable).
 - **Instructions**: Setup guides and usage instructions for each project.
+
+---
 
 ## 💬 Contact
 Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project. 
