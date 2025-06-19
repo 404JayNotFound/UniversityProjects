@@ -165,24 +165,24 @@ To use the Google Drive API within the Python code for storing sensor data, you 
   sudo nano /etc/systemd/system/sensor-data.service
 
 - Add the following content to the file (replace /path/to/your/script.py with the actual path to your Python script):
-
-```
-  [Unit]
-  Description=Sensor Data Collection and Upload Script
-  After=network.target
   
-  [Service]
-  ExecStart=/usr/bin/python3 /path/to/your/script.py
-  WorkingDirectory=/path/to/your/
-  StandardOutput=inherit
-  StandardError=inherit
-  Restart=always
-  User=pi
-  Group=pi
-  
-  [Install]
-  WantedBy=multi-user.target
-```
+  ```
+    [Unit]
+    Description=Sensor Data Collection and Upload Script
+    After=network.target
+    
+    [Service]
+    ExecStart=/usr/bin/python3 /path/to/your/script.py
+    WorkingDirectory=/path/to/your/
+    StandardOutput=inherit
+    StandardError=inherit
+    Restart=always
+    User=pi
+    Group=pi
+    
+    [Install]
+    WantedBy=multi-user.target
+  ```
 
 2. **Explanation of the Service File:**
   - Description: A short description of the service.
