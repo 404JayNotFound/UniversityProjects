@@ -5,7 +5,8 @@ This project involves a full stack build of an **Environmental Monitoring System
 **For a full comprehensive breakdown and in-depth analysis of the entire project, including its entire development process, the set goals, and more, refer to the** [Project Report](https://github.com/404JayNotFound/UniversityProjects/raw/main/WeatherMonitoringSystem/EnvironmentalMonitoringSystemESTProjectReport.pdf)
 
 <div align="center">
-  
+
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
