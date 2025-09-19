@@ -1,8 +1,18 @@
-## 🌱 Environmental Monitoring System with Arduino & Google Drive Integration 🌍
+# 🌱 Environmental Monitoring System 🌍
 
-This project involves an **Environmental Monitoring System** that collects data from various sensors and stores it in a CSV file. The data is then automatically uploaded to **Google Drive** for easy access and future analysis. The system is built using **Arduino**, **Python**, **Dash**, and **Google API**. The sensors used are a **Photoresistor**, **MQ135 gas sensor**, and **DHT11 temperature & humidity sensor**. 
+This project involves a full stack build of an **Environmental Monitoring System** that collects data from various sensors and stores it in a CSV file. The data is then automatically uploaded to **Google Drive** for easy access and future analysis. The system is built using **Arduino**, **Python**, **Dash**, and **Google API**. The sensors used are a **Photoresistor**, **MQ135 gas sensor**, and **DHT11 temperature & humidity sensor**. 
 
 **For a full comprehensive breakdown and in-depth analysis of the entire project, including its entire development process, the set goals, and more, refer to the** [Project Report](https://github.com/404JayNotFound/UniversityProjects/raw/main/WeatherMonitoringSystem/EnvironmentalMonitoringSystemESTProjectReport.pdf)
+
+<div align="center">
+
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-Raspberry_Pi-C51A4A?style=for-the-badge&logo=Raspberry-Pi) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+
+</div>
 
 ---
 ## 📋 Table of Contents
@@ -156,24 +166,24 @@ To use the Google Drive API within the Python code for storing sensor data, you 
   sudo nano /etc/systemd/system/sensor-data.service
 
 - Add the following content to the file (replace /path/to/your/script.py with the actual path to your Python script):
-
-```
-  [Unit]
-  Description=Sensor Data Collection and Upload Script
-  After=network.target
   
-  [Service]
-  ExecStart=/usr/bin/python3 /path/to/your/script.py
-  WorkingDirectory=/path/to/your/
-  StandardOutput=inherit
-  StandardError=inherit
-  Restart=always
-  User=pi
-  Group=pi
-  
-  [Install]
-  WantedBy=multi-user.target
-```
+  ```
+    [Unit]
+    Description=Sensor Data Collection and Upload Script
+    After=network.target
+    
+    [Service]
+    ExecStart=/usr/bin/python3 /path/to/your/script.py
+    WorkingDirectory=/path/to/your/
+    StandardOutput=inherit
+    StandardError=inherit
+    Restart=always
+    User=pi
+    Group=pi
+    
+    [Install]
+    WantedBy=multi-user.target
+  ```
 
 2. **Explanation of the Service File:**
   - Description: A short description of the service.
