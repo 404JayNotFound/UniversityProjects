@@ -329,6 +329,6 @@ Feel free to explore, or reach out for questions. You can contact me via GitHub 
 
 ## Contributors
 - [Jamie O'Connor](https://github.com/404JayNotFound)
-- Cathal O'Regan
-- Alan O'Connell
+- [Cathal O'Regan](https://github.com/oregancathal123)
+- [Alan O'Connell](https://github.com/Alan64578)
 
