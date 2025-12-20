@@ -1,4 +1,4 @@
-# 🛠️ University Projects - Electronic Engineering
+#  University Projects - Electronic Engineering
 
 Welcome to my repository! This repository hosts a variety of projects that were completed during my studies in Electronic Engineering for their respective modules. It covers a broad range of topics, from circuit design and microcontroller programming to signal processing and IoT systems. Each project demonstrates the practical application of engineering principles and showcases my skills in both hardware and software development.
 
@@ -16,7 +16,7 @@ The projects here reflect the culmination of theory, hands-on learning, and prob
 
 ---
 
-## 🚀 Project Areas
+##  Project Areas
 This repository is divided into several key areas of Electronic Engineering:
 
 ### 1. **Hardware Design & Embedded Systems**
@@ -46,7 +46,7 @@ This repository is divided into several key areas of Electronic Engineering:
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 Below are some of the tools, platforms, and technologies that have been used across my projects:
 
 ### **Programming Languages & Frameworks**
@@ -69,7 +69,7 @@ Below are some of the tools, platforms, and technologies that have been used acr
 
 ---
 
-## 📝 How to Use
+##  How to Use
 Each project in this repository contains:
 - **Source Code**: Python scripts, C/C++ code for microcontrollers, and related files.
 - **Documentation**: Detailed explanations of the project objectives, functionality, and results.
