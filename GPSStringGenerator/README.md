@@ -1,4 +1,4 @@
-# 🛠️ GPS String Generator
+#  GPS String Generator
 
 **Project Description**: <br>
 This project generates a GPS data string in the `$GPGLL` format. The program prompts the user to enter both latitude and longitude coordinates, along with direction indicators (N/S for latitude and E/W for longitude), and constructs a GPS string that follows the NMEA standard.
@@ -14,7 +14,7 @@ The program does the following:
   - Where time and status are fixed fields, and the checksum is calculated based on the data string.
  - Outputs the formatted GPS string with the checksum appended at the end.
 
-## 📑 Table of Contents
+##  Table of Contents
 
 1. [Overview](#-overview)
 2. [How It Works](#-how-it-works)
@@ -26,7 +26,7 @@ The program does the following:
 
 ---
 
-## 📝 Overview
+##  Overview
 
 This program accepts GPS coordinates from the user in a specific format and generates a properly formatted `$GPGLL` string. It includes user-friendly prompts and input validation to ensure the correctness of latitude, longitude, and direction values.
 
@@ -44,7 +44,7 @@ This program accepts GPS coordinates from the user in a specific format and gene
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 1. **Input for Latitude and Longitude**: The program prompts the user to enter the latitude and longitude values in the format DDMM.MMMM or DDDMM.MMMM.
 2. **Direction Validation**: The user is asked to specify whether the latitude is North (N) or South (S) and whether the longitude is East (E) or West (W).
@@ -54,21 +54,21 @@ This program accepts GPS coordinates from the user in a specific format and gene
 
 ---
 
-## 💻 Technologies Used
+##  Technologies Used
 
 - **C**: The program is written in C, utilizing basic input/output functions and string manipulation to generate the GPS string.
 - **Standard Libraries**: The program uses standard libraries such as `stdio.h`, `string.h`, `ctype.h` and `stdlib.h` for input/output operations, string formatting, and general functionality.
 
 ---
 
-## 📋 Project Requirements
+##  Project Requirements
 
 - A C compiler (e.g., GCC) to compile the code.
 - Basic knowledge of GPS coordinate formatting and the NMEA standard.
 
 ---
 
-## 🎯 Example Usage
+##  Example Usage
 
 ```
 Enter latitude (format: DDMM.MMMM): 3713.1234
@@ -80,7 +80,7 @@ Formatted GPS String: $GPGLL,3713.1234,N,12213.1234,W,225444,A,@57
 
 ---
 
-## 💬 Contact
+##  Contact
 Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
 
 ## Contributors
