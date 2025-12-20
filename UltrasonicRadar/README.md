@@ -1,6 +1,6 @@
-# 🚀 **Ultrasonic Radar System**
+#  **Ultrasonic Radar System**
 
-## 🧭 **Overview**
+##  **Overview**
 The **Ultrasonic Radar System** is a real-time system designed to simulate radar functionality using an **Arduino Uno** microcontroller. By integrating an **HC-SR04 ultrasonic sensor**, a **micro servo motor**, and an **I2C LCD display**, the system is capable of scanning a 180° range, measuring distances to objects, and displaying the results in real-time.
 
 The system operates by rotating the ultrasonic sensor using the micro servo, emitting ultrasonic pulses to detect nearby objects, and calculating distances using the time-of-flight method. This data is then displayed on an LCD and can be transmitted via serial communication for external visualization.
@@ -19,7 +19,7 @@ This project is an excellent platform for understanding principles such as **dis
 
 ---
 
-## 📑 **Table of Contents**
+##  **Table of Contents**
 1. [Overview](#overview)
 2. [Features](#features)
 3. [Hardware Components](#hardware-components)
@@ -34,7 +34,7 @@ This project is an excellent platform for understanding principles such as **dis
 
 ---
 
-## 🌟 **Features**
+##  **Features**
 - **Distance Measurement**: 
   - Uses the **HC-SR04 ultrasonic sensor** to measure distances with high accuracy. The sensor operates on the principle of emitting an ultrasonic wave and measuring the time it takes to reflect back after hitting an object.
   
@@ -52,7 +52,7 @@ This project is an excellent platform for understanding principles such as **dis
 
 ---
 
-## 🛠️ **Hardware Components**
+##  **Hardware Components**
 This project uses the following components to build the radar system:
 
 - **Arduino Uno**:
@@ -76,7 +76,7 @@ This project uses the following components to build the radar system:
 - **Push Button** (Optional):
   - A **push button** could be used for additional user input, such as manually resetting the system, pausing the scan, or switching modes.
 
-### 💰 **Bill of Materials**
+###  **Bill of Materials**
 <div align="center">
   
   | Item                | Quantity | Description                  | Estimated Cost (EUR) |
@@ -95,7 +95,7 @@ This project uses the following components to build the radar system:
 
 ---
 
-## 💻 **Software Requirements**
+##  **Software Requirements**
 - **Arduino IDE**:
   - The **Arduino IDE** is used for writing the firmware for the **Arduino Uno**. The code is written in **C++** and uploaded to the microcontroller, where it handles the servo control, sensor data collection, and LCD display updates.
   
@@ -109,7 +109,7 @@ This project uses the following components to build the radar system:
     
 ---
 
-## 🔌 **Circuit Design**
+##  **Circuit Design**
 The **Servo Ultrasonic Radar System** integrates several components, and the circuit follows these key connections:
 
 - **HC-SR04 Ultrasonic Sensor**:
@@ -133,11 +133,11 @@ The **Servo Ultrasonic Radar System** integrates several components, and the cir
 
 ---
 
-## 🖥️ **PCB Design**
+##  **PCB Design**
 
 The **Servo Ultrasonic Radar System** can benefit from a custom-designed PCB (Printed Circuit Board) to streamline assembly, reduce wiring complexity, and improve reliability. Below is an overview of the PCB design and the key components integrated into the design.
 
-### 📐 **Overview of PCB Design**
+###  **Overview of PCB Design**
 
 The PCB design for the Servo Ultrasonic Radar System incorporates the following key elements:
 
@@ -157,9 +157,9 @@ The PCB design for the Servo Ultrasonic Radar System incorporates the following 
  
 ---
 
-## 🖥️ **Code Description**
+##  **Code Description**
 
-### 💡**Arduino Code**
+### **Arduino Code**
 - **Purpose**: The Arduino code controls the servo, measures distances, and manages outputs to the LCD and LED.
 - **Key Functions**:
   - `setup()`: Initializes pin modes, LCD, and serial communication.
@@ -167,13 +167,13 @@ The PCB design for the Servo Ultrasonic Radar System incorporates the following 
   - `rotateAndMeasure()`: Rotates the sensor through a set range of angles, takes distance readings, and triggers the LED if within threshold.
   - `measureDistance()`: Uses the **HC-SR04** sensor to calculate distances.
 
-### 🐍 **Python Code**
+###  **Python Code**
 - The Python script reads the serial data from the Arduino and plots the scanned radar-like data using **Matplotlib**. This provides a graphical representation of detected objects, allowing further analysis or visualization.
 ![Screenshot 2024-12-31 220252](https://github.com/user-attachments/assets/76b57ad6-adc8-46f7-a219-e19d747061a7)
 
 ---
 
-## ⚙️ **Setup Instructions**
+##  **Setup Instructions**
 1. **Hardware Assembly**:
    - Mount the components on a breadboard or a custom PCB.
    - Connect the ultrasonic sensor, servo motor, LED, and I2C LCD according to the circuit diagram provided.
@@ -193,7 +193,7 @@ The PCB design for the Servo Ultrasonic Radar System incorporates the following 
 
 ---
 
-## 🔧 **Future Improvements**
+##  **Future Improvements**
 - **Integration of Additional Sensors**:
   - Add sensors such as **PIR** for motion detection to enhance the system’s functionality.
   
@@ -208,7 +208,7 @@ The PCB design for the Servo Ultrasonic Radar System incorporates the following 
 
 ---
 
-## 💬 Contact
+##  Contact
 Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
 
 ## Contributors
