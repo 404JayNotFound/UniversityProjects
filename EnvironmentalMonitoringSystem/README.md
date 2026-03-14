@@ -1,4 +1,4 @@
-# 🌱 Environmental Monitoring System 🌍
+#  Environmental Monitoring System 
 
 This project involves a full stack build of an **Environmental Monitoring System** that collects data from various sensors and stores it in a CSV file. The data is then automatically uploaded to **Google Drive** for easy access and future analysis. The system is built using **Arduino**, **Python**, **Dash**, and **Google API**. The sensors used are a **Photoresistor**, **MQ135 gas sensor**, and **DHT11 temperature & humidity sensor**. 
 
@@ -15,7 +15,7 @@ This project involves a full stack build of an **Environmental Monitoring System
 </div>
 
 ---
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Project Overview](#project-overview)
 - [Hardware Components](#hardware-components)
@@ -41,12 +41,12 @@ This project involves a full stack build of an **Environmental Monitoring System
 - [Contributors](#contributors)
 
 --- 
-## 📍 Project Overview
+##  Project Overview
 
 This project integrates data collection, storage, and real-time monitoring using various **Arduino** sensors. The Arduino reads data from sensors (light, air quality, temperature, and humidity), logs the data into a CSV file, and uploads it to **Google Drive** using Python. The **Dash** web application then displays real-time data on an interactive online dashboard.
 
 ---
-## 🛠 Hardware Components
+##  Hardware Components
 
 - **Raspberry Pi**
 - **Arduino UNO**
@@ -57,7 +57,7 @@ This project integrates data collection, storage, and real-time monitoring using
 - Jumper wires and breadboard
 
 ---
-## 💻 Software Components
+##  Software Components
 
 - **Arduino IDE** for writing and uploading code to the Arduino
 - **Python 3.x** for running scripts to log data and interact with Google Drive
@@ -65,7 +65,7 @@ This project integrates data collection, storage, and real-time monitoring using
 - **Google Drive API** for cloud storage integration
 
 ---
-## 🧑‍💻 How It Works
+##  How It Works
 
 Below shows the basic system architecture, which illustrates the flow of data from the sensors through the Arduino, processed and logged by the Python script, and then stored on Google Drive for real-time monitoring and visualization via the Dash application. 
 <div align="center">
@@ -98,7 +98,7 @@ Below shows the basic system architecture, which illustrates the flow of data fr
 </div>
 
 ---
-## 🌐 Google Drive Credentials
+##  Google Drive Credentials
 
 To use the Google Drive API within the Python code for storing sensor data, you need to set up credentials in the Google Developer Console.
 
@@ -126,7 +126,7 @@ To use the Google Drive API within the Python code for storing sensor data, you 
 
 ---
 
-## 🛠 Setup Instructions
+##  Setup Instructions
 
 ## Arduino Setup
 
@@ -228,7 +228,7 @@ To use the Google Drive API within the Python code for storing sensor data, you 
     ````
     
 ---
-## 📊 Monitoring Dashboard
+##  Monitoring Dashboard
 
 The **Dash** web application provides a real-time graphical interface to monitor the sensor readings. The dashboard displays:
 
@@ -240,7 +240,7 @@ The **Dash** web application provides a real-time graphical interface to monitor
 The graphs are automatically updated every **60 seconds** with the latest data collected from the sensors.
 
 ---
-## 🐞 Troubleshooting
+##  Troubleshooting
 
 ### No Data Displayed on Dashboard
 
@@ -294,14 +294,14 @@ pip install dash pandas plotly google-auth google-auth-oauthlib google-api-pytho
 ````
 
 ---
-## 💡 Proof of Concept
+##  Proof of Concept
 
 This project serves as a proof of concept for integrating **Arduino sensors** with cloud storage and real-time data visualization. The system demonstrates how sensor data can be collected, logged, and uploaded to **Google Drive**, and how that data can be dynamically visualized in a web-based dashboard using Dash.
 
 While the current implementation showcases the core functionality, there is significant potential to extend this project. For example, **machine learning models** could be integrated into the system to train and predict future sensor data based on historical patterns. By using the sensor data collected over time, it would be possible to develop a **predictive model** that can forecast future values for variables like temperature, humidity, light level, or gas concentration. The system could display not only the current readings but also **predicted future values**, helping users anticipate trends.
 
 ---
-## 🛠 Purchase Links for Components Used
+##  Purchase Links for Components Used
 
 The following hardware components are used for this project. You can purchase them from the provided links:
 <div align="center">
@@ -324,11 +324,11 @@ The following hardware components are used for this project. You can purchase th
 
 
 ---
-## 💬 Contact
+##  Contact
 Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
 
 ## Contributors
 - [Jamie O'Connor](https://github.com/404JayNotFound)
-- Cathal O'Regan
-- Alan O'Connell
+- [Cathal O'Regan](https://github.com/oregancathal123)
+- [Alan O'Connell](https://github.com/Alan64578)
 

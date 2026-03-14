@@ -1,4 +1,4 @@
-# 🤖 Mobile Robotics System with LeJOS EV3 🚀
+#  Mobile Robotics System with LeJOS EV3 
 
 This project implements a **Mobile Robotics System** using the **Subsumption Architecture** on the **LEGO EV3 platform** with the LeJOS framework. The robot leverages modular behaviors and sensory inputs to dynamically interact with its environment. The system is a practical demonstration of hierarchical control systems for autonomous robots.
 
@@ -11,7 +11,7 @@ This project implements a **Mobile Robotics System** using the **Subsumption Arc
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Project Overview](#project-overview)
 - [Hardware Components](#hardware-components)
@@ -34,7 +34,7 @@ This project implements a **Mobile Robotics System** using the **Subsumption Arc
 
 ---
 
-## 🌍 Project Overview
+##  Project Overview
 
 This project is a comprehensive implementation of autonomous robotic behavior using the **Subsumption Architecture**, built on the **LeJOS EV3** framework. The robot integrates real-time sensory data and hierarchical behaviors to navigate and interact with its environment. 
 
@@ -47,7 +47,7 @@ The robot's behaviors include navigating forward, detecting and avoiding obstacl
 
 ---
 
-## 🛠 Hardware Components
+##  Hardware Components
 
 - **LEGO Mindstorms EV3 Brick**: The primary computational unit for executing control algorithms.
 - **Ultrasonic Sensor**: Measures distances for obstacle detection and wall-following behaviors.
@@ -66,7 +66,7 @@ The robot's behaviors include navigating forward, detecting and avoiding obstacl
 
 ---
 
-## 💻 Software Components
+##  Software Components
 
 - **LeJOS EV3**: A Java-based alternative firmware for the EV3 brick, enabling advanced programming capabilities.
 - **Eclipse IDE**: Used for developing and debugging the Java code.
@@ -75,9 +75,9 @@ The robot's behaviors include navigating forward, detecting and avoiding obstacl
 
 ---
 
-## 🛠 System Architecture
+##  System Architecture
 
-### Subsumption Architecture 🧠
+### Subsumption Architecture 
 The robot's control system is based on **Subsumption Architecture**, which organizes behaviors into a hierarchy:
 - **Layered Design**: Behaviors are grouped into layers based on priority.
 - **Behavior Modules**: Each module corresponds to a specific task, such as movement, obstacle avoidance, or light response.
@@ -99,7 +99,7 @@ Arbitration resolves conflicts when multiple behaviors request control simultane
 
 ---
 
-## ⚙️ Behavior Design
+##  Behavior Design
 
 ### Behavior 0: Forward Movement
 - **Function**: Moves the robot forward at a constant speed.
@@ -155,7 +155,7 @@ Arbitration resolves conflicts when multiple behaviors request control simultane
 
 ---
 
-## 📐 Implementation Details
+##  Implementation Details
 
 - Each behavior is implemented as a separate class in Java, adhering to the **LeJOS Subsumption Framework**.
 - Sensor data is processed in real time to trigger behaviors dynamically.
@@ -164,7 +164,7 @@ Arbitration resolves conflicts when multiple behaviors request control simultane
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### Hardware Setup
 1. Assemble the robot with the sensors and motors connected to the appropriate ports on the EV3 brick.
@@ -178,7 +178,7 @@ Arbitration resolves conflicts when multiple behaviors request control simultane
 
 ---
 
-## ✨ System Features
+##  System Features
 
 - **Dynamic Behavior Arbitration**: Automatically selects the most relevant behavior based on sensory input.
 - **Modular Design**: Independent behavior modules for easy extension and debugging.
@@ -186,7 +186,7 @@ Arbitration resolves conflicts when multiple behaviors request control simultane
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - **Advanced Sensors**: Incorporate cameras or gyroscopes for complex behaviors.
 - **Mapping and Localization**: Implement SLAM for improved navigation.
@@ -194,7 +194,7 @@ Arbitration resolves conflicts when multiple behaviors request control simultane
 
 ---
 
-## 💬 Contact
+##  Contact
 Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
 
 ## Contributors

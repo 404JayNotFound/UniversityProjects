@@ -1,11 +1,11 @@
-# 🌡️ Car Climate Control System
+#  Car Climate Control System
 
 **Project Description**: <br>
 This project simulates a basic climate control system for a car. The system reads a **threshold temperature** (the temperature above which the fan will activate) and continuously monitors the **current temperature**. If the temperature exceeds the threshold, the fan is activated. If the temperature falls below a predefined low threshold, the system simulates a sensor reading and activates the heater. The fan remains on for 1 minute (simulated) after the temperature drops below the threshold to simulate a cooling period.
 
 The program uses a simulated **Port B** to control the fan, heater, and sensor, and provides real-time feedback in both **binary** and **hexadecimal** formats.
 
-## 📑 Table of Contents
+##  Table of Contents
 
 1. [Overview](#-overview)
 2. [How It Works](#-how-it-works)
@@ -17,7 +17,7 @@ The program uses a simulated **Port B** to control the fan, heater, and sensor, 
 
 ---
 
-## 📝 Overview
+##  Overview
 
 The program simulates a basic climate control system for a car environment. It is designed to activate the **fan** when the ambient temperature exceeds a specified threshold and the **heater** when the temperature falls below a predefined low value. The system operates based on the following logic:
 
@@ -28,7 +28,7 @@ The program simulates a basic climate control system for a car environment. It i
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 1. **Threshold Temperature Input**: The user is prompted to enter a **threshold temperature**, which is validated to ensure it is higher than the predefined minimum heater threshold.
 2. **Current Temperature Monitoring**: After setting the threshold, the program enters a loop, asking the user to input the **current temperature** at regular intervals.
@@ -41,7 +41,7 @@ The program simulates a basic climate control system for a car environment. It i
 
 ---
 
-## 💻 Technologies Used
+##  Technologies Used
 
 - **C**: The program is implemented in C, utilizing basic input/output functions to interact with the user and manage control logic.
 - **Standard Libraries**: The program uses libraries like `stdio.h` for input/output operations.
@@ -49,7 +49,7 @@ The program simulates a basic climate control system for a car environment. It i
 
 ---
 
-## 📋 Project Requirements
+##  Project Requirements
 
 - **C Compiler**: A C compiler such as GCC is required to compile and run the code.
 - **Basic Knowledge of Embedded Systems**: Understanding the logic of controlling bits in a port register and simulating hardware actions.
@@ -58,7 +58,7 @@ The program simulates a basic climate control system for a car environment. It i
 
 ---
 
-## 🎯 Example Usage
+##  Example Usage
 
 ```text
 Enter the threshold temperature (C): 25
@@ -75,7 +75,7 @@ Current state of Port B: 10100000 (0xA0)
 
 ---
 
-## 💬 **Contact**
+##  **Contact**
 
 Feel free to explore, contribute, or reach out for questions regarding the project. You can contact me through GitHub or email for further inquiries.
 

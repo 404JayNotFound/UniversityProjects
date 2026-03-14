@@ -4,7 +4,7 @@ This repository serves as a comprehensive digital archive encompassing all the e
 
 ---
 
-## ⚙️ Key Features
+##  Key Features
 
 - **Modular Subcircuit Schematics:** Clearly organized schematics for key functional blocks, including Impedance matching, Amplification, Voltage Reference, and others, facilitating understanding and modification.
 - **PIC18F24J50 Microcontroller Core:** Utilizes the PIC18F24J50 for precise input signal capture and overall system control.
@@ -14,7 +14,7 @@ This repository serves as a comprehensive digital archive encompassing all the e
 
 ---
 
-## 📄 Documentation
+##  Documentation
 
 This section contains detailed information about the design and development process.
 
@@ -25,7 +25,7 @@ This section contains detailed information about the design and development proc
 
 ---
 
-## 💬 Contact
+##  Contact
 Feel free to explore, or reach out for questions. You can contact me via GitHub or email for inquiries related to any specific project.
 
 ## Contributors
