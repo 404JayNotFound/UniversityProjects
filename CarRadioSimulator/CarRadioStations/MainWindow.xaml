@@ -1,0 +1,470 @@
+<Window x:Class="CarRadioSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CarRadioSimulator"
+        Title="Car Radio Simulator — RDS"
+        Height="720" Width="980"
+        MinHeight="680" MinWidth="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#1A1A2E">
+
+	<Window.Resources>
+
+		<!-- Colour palette for the application -->
+		<SolidColorBrush x:Key="PanelBg"      Color="#141f3d"/>
+		<SolidColorBrush x:Key="CardBg"       Color="#0F3460"/>
+		<SolidColorBrush x:Key="AccentOrange" Color="#e83c59"/>
+		<SolidColorBrush x:Key="AccentCyan"   Color="#02c4e6"/>
+		<SolidColorBrush x:Key="FgPrimary"    Color="#d9d7d7"/>
+		<SolidColorBrush x:Key="FgSecondary"  Color="#9c9a9a"/>
+		<SolidColorBrush x:Key="LedGreen"     Color="#2af005"/>
+		<SolidColorBrush x:Key="LedOff"       Color="#142116"/>
+
+		<!-- Base button style for the radio buttons -->
+		<Style x:Key="RadioBtn" TargetType="Button">
+			<Setter Property="Background"   Value="#0F3460"/>
+			<Setter Property="Foreground"   Value="#d9d7d7"/>
+			<Setter Property="BorderBrush"  Value="#e83c59"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="FontFamily"   Value="Consolas"/>
+			<Setter Property="FontSize"     Value="12"/>
+			<Setter Property="Padding"      Value="10 5"/>
+			<Setter Property="Cursor"       Value="Hand"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+							<ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}"/>
+						</Border>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsMouseOver" Value="True">
+								<Setter Property="Background" Value="#e83c59"/>
+								<Setter Property="Foreground" Value="White"/>
+							</Trigger>
+							<Trigger Property="IsPressed" Value="True">
+								<Setter Property="Background" Value="#C73652"/>
+							</Trigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+		<!-- Label style for form fields -->
+		<Style x:Key="FieldLabel" TargetType="TextBlock">
+			<Setter Property="Foreground"  Value="#9c9a9a"/>
+			<Setter Property="FontFamily"  Value="Consolas"/>
+			<Setter Property="FontSize"    Value="11"/>
+			<Setter Property="Margin"      Value="0 0 0 2"/>
+		</Style>
+
+		<!-- Value style for form fields -->
+		<Style x:Key="FieldValue" TargetType="TextBlock">
+			<Setter Property="Foreground"  Value="#02c4e6"/>
+			<Setter Property="FontFamily"  Value="Consolas"/>
+			<Setter Property="FontSize"    Value="14"/>
+			<Setter Property="FontWeight"  Value="Bold"/>
+		</Style>
+
+		<!-- ComboBox style -->
+		<Style TargetType="ComboBox">
+			<Setter Property="Background"   Value="#0F3460"/>
+			<Setter Property="Foreground"   Value="Black"/>
+			<Setter Property="BorderBrush"  Value="#e83c59"/>
+			<Setter Property="FontFamily"   Value="Consolas"/>
+			<Setter Property="FontSize"     Value="12"/>
+		</Style>
+
+		<!-- ComboBoxItem style -->
+		<Style TargetType="ComboBoxItem">
+			<Setter Property="Background"   Value="White"/>
+			<Setter Property="Foreground"   Value="Black"/>
+			<Setter Property="FontFamily"   Value="Consolas"/>
+			<Setter Property="FontSize"     Value="12"/>
+			<Setter Property="Padding"      Value="6 4"/>
+			<Style.Triggers>
+				<Trigger Property="IsHighlighted" Value="True">
+					<Setter Property="Background" Value="#e83c59"/>
+					<Setter Property="Foreground" Value="White"/>
+				</Trigger>
+				<Trigger Property="IsSelected" Value="True">
+					<Setter Property="Background" Value="#e83c59"/>
+					<Setter Property="Foreground" Value="White"/>
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+
+	</Window.Resources>
+
+	<DockPanel>
+		<Menu DockPanel.Dock="Top"
+		  Background="#0F3460" Foreground="#d9d7d7"
+		  FontFamily="Consolas" FontSize="12">
+			<MenuItem Header="_File"
+					  Background="#0F3460"
+					  Foreground="#d9d7d7">
+				<MenuItem.Resources>
+					<Style TargetType="MenuItem">
+						<Setter Property="Background" Value="White"/>
+						<Setter Property="Foreground" Value="Black"/>
+						<Setter Property="FontFamily" Value="Consolas"/>
+						<Setter Property="FontSize"   Value="12"/>
+						<Style.Triggers>
+							<Trigger Property="IsHighlighted" Value="True">
+								<Setter Property="Background" Value="#e83c59"/>
+								<Setter Property="Foreground" Value="White"/>
+							</Trigger>
+						</Style.Triggers>
+					</Style>
+				</MenuItem.Resources>
+				<MenuItem x:Name="MenuLoad"   Header="_Load Stations"    Click="MenuLoad_Click"/>
+				<MenuItem x:Name="MenuFilter" Header="_Filter Stations"  Click="MenuFilter_Click"/>
+				<Separator/>
+				<MenuItem x:Name="MenuExit"   Header="_Exit Application" Click="MenuExit_Click"/>
+			</MenuItem>
+		</Menu>
+
+		<!-- ── Main content ── -->
+		<Grid Margin="14">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<!-- ══ Row 0: Title ════════════════════════════════════════════ -->
+			<TextBlock Grid.Row="0"
+                       Text="  CAR RADIO SIMULATOR  "
+                       Foreground="#e83c59"
+                       FontFamily="Consolas"
+                       FontSize="22" FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10"/>
+
+			<!-- ══ Row 1: Frequency display + slider ══════════════════════ -->
+			<Border Grid.Row="1"
+                    Background="#0F3460"
+                    CornerRadius="8"
+                    Padding="16 12"
+                    Margin="0 0 0 10">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<StackPanel Grid.Column="0">
+						<TextBlock Text="TUNER DIAL"
+                                   Style="{StaticResource FieldLabel}"
+                                   FontSize="10" Margin="0 0 0 4"/>
+
+						<Border Background="#000810" CornerRadius="4"
+                                Padding="12 6" HorizontalAlignment="Left">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock x:Name="TxtFrequency"
+                                           Text="88.0"
+                                           Foreground="#2af005"
+                                           FontFamily="Courier New"
+                                           FontSize="36" FontWeight="Bold"/>
+								<TextBlock Text=" MHz"
+                                           Foreground="#2af005"
+                                           FontFamily="Courier New"
+                                           FontSize="20"
+                                           VerticalAlignment="Bottom"
+                                           Margin="4 0 0 4"/>
+							</StackPanel>
+						</Border>
+
+						<Slider x:Name="FreqSlider"
+                                Minimum="0" Maximum="200"
+                                Value="0"
+                                TickFrequency="10"
+                                IsSnapToTickEnabled="False"
+                                ValueChanged="FreqSlider_ValueChanged"
+                                Foreground="#e83c59"
+                                Margin="0 10 0 0"/>
+
+						<Grid Margin="0 2 0 0">
+							<TextBlock Text="88.0 MHz" Foreground="#9c9a9a"
+                                       FontFamily="Consolas" FontSize="10"
+                                       HorizontalAlignment="Left"/>
+							<TextBlock Text="98.0 MHz" Foreground="#9c9a9a"
+                                       FontFamily="Consolas" FontSize="10"
+                                       HorizontalAlignment="Center"/>
+							<TextBlock Text="108.0 MHz" Foreground="#9c9a9a"
+                                       FontFamily="Consolas" FontSize="10"
+                                       HorizontalAlignment="Right"/>
+						</Grid>
+					</StackPanel>
+
+					<!-- Travel info LED -->
+					<StackPanel Grid.Column="1"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Margin="20 0 0 0">
+						<Ellipse x:Name="LedTravel"
+                                 Width="24" Height="24"
+                                 Fill="{StaticResource LedOff}"
+                                 Stroke="#555" StrokeThickness="2"/>
+						<TextBlock Text="TA"
+                                   Foreground="#9c9a9a"
+                                   FontFamily="Consolas"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center"
+                                   Margin="0 2 0 0"/>
+						<TextBlock Text="TRAVEL"
+                                   Foreground="#9c9a9a"
+                                   FontFamily="Consolas"
+                                   FontSize="9"
+                                   HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Grid>
+			</Border>
+
+			<!-- ══ Row 2: RDS Info Cards ═══════════════════════════════════ -->
+			<Grid Grid.Row="2" Margin="0 0 0 10">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+
+				<!-- Station Name -->
+				<Border Grid.Column="0" Background="#0F3460" CornerRadius="6"
+                        Padding="12 10" Margin="0 0 6 0">
+					<StackPanel>
+						<TextBlock Text="STATION" Style="{StaticResource FieldLabel}"/>
+						<TextBlock x:Name="TxtStationName"
+                                   Text="---"
+                                   Style="{StaticResource FieldValue}"
+                                   FontSize="18"/>
+					</StackPanel>
+				</Border>
+
+				<!-- Radio Text -->
+				<Border Grid.Column="1" Background="#0F3460" CornerRadius="6"
+                        Padding="12 10" Margin="0 0 6 0">
+					<StackPanel>
+						<TextBlock Text="RADIO TEXT (RT)" Style="{StaticResource FieldLabel}"/>
+						<TextBlock x:Name="TxtRadioText"
+                                   Text="---"
+                                   Style="{StaticResource FieldValue}"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"/>
+					</StackPanel>
+				</Border>
+
+				<!-- Base Frequency -->
+				<Border Grid.Column="2" Background="#0F3460" CornerRadius="6"
+                        Padding="12 10" Margin="0 0 6 0">
+					<StackPanel>
+						<TextBlock Text="BASE FREQ (MHz)" Style="{StaticResource FieldLabel}"/>
+						<TextBlock x:Name="TxtBaseFreq"
+                                   Text="---"
+                                   Style="{StaticResource FieldValue}"/>
+					</StackPanel>
+				</Border>
+
+				<!-- Alt Frequency -->
+				<Border Grid.Column="3" Background="#0F3460" CornerRadius="6"
+                        Padding="12 10">
+					<StackPanel>
+						<TextBlock Text="ALT FREQ (MHz)" Style="{StaticResource FieldLabel}"/>
+						<TextBlock x:Name="TxtAltFreq"
+                                   Text="---"
+                                   Style="{StaticResource FieldValue}"/>
+					</StackPanel>
+				</Border>
+			</Grid>
+
+			<!-- ══ Row 3: Filter controls + action buttons ════════════════ -->
+			<Border Grid.Row="3"
+                    Background="#0F3460"
+                    CornerRadius="8"
+                    Padding="14 10"
+                    Margin="0 0 0 10">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+
+					<!-- From label + combo -->
+					<TextBlock Grid.Column="0" Text="From:"
+                               Foreground="#9c9a9a" FontFamily="Consolas"
+                               FontSize="12" VerticalAlignment="Center"
+                               Margin="0 0 6 0"/>
+					<ComboBox x:Name="CboFrom" Grid.Column="1"
+                              Width="100" Height="28"
+                              VerticalAlignment="Center"
+                              Margin="0 0 10 0"/>
+
+					<!-- To label + combo -->
+					<TextBlock Grid.Column="2" Text="To:"
+                               Foreground="#9c9a9a" FontFamily="Consolas"
+                               FontSize="12" VerticalAlignment="Center"
+                               Margin="0 0 6 0"/>
+					<ComboBox x:Name="CboTo" Grid.Column="3"
+                              Width="100" Height="28"
+                              VerticalAlignment="Center"
+                              Margin="0 0 10 0"/>
+
+					<!-- Filter button -->
+					<Button Grid.Column="4" Content="▼ Filter"
+                            Style="{StaticResource RadioBtn}"
+                            Height="28"
+                            Click="BtnFilter_Click"
+                            Margin="0 0 10 0"/>
+
+					<!-- Filter active checkbox -->
+					<CheckBox x:Name="ChkFilterActive"
+                              Grid.Column="5"
+                              Content="Filter Active"
+                              Foreground="#9c9a9a"
+                              FontFamily="Consolas" FontSize="11"
+                              VerticalAlignment="Center"
+                              IsHitTestVisible="False"
+                              Margin="0 0 10 0"/>
+
+					<!-- Spacer -->
+					<Grid Grid.Column="6"/>
+
+					<!-- Load Stations -->
+					<Button Grid.Column="7"
+                            x:Name="BtnLoad"
+                            Content="⬆ Load Stations"
+                            Style="{StaticResource RadioBtn}"
+                            Height="28"
+                            Click="BtnLoad_Click"
+                            Margin="0 0 8 0"/>
+
+					<!-- Display Stations -->
+					<Button Grid.Column="8"
+                            x:Name="BtnDisplay"
+                            Content="◉ Display Stations"
+                            Style="{StaticResource RadioBtn}"
+                            Height="28"
+                            Click="BtnDisplay_Click"
+                            Margin="0 0 8 0"/>
+
+					<!-- Clear Filter -->
+					<Button Grid.Column="9"
+                            Content="✕ Clear Filter"
+                            Style="{StaticResource RadioBtn}"
+                            Height="28"
+                            Click="BtnClearFilter_Click"/>
+				</Grid>
+			</Border>
+
+			<!-- ══ Row 4: Station chart / list view ════════════════════════ -->
+			<Border Grid.Row="4"
+                    Background="#0F3460"
+                    CornerRadius="8"
+                    Padding="14 10"
+                    Margin="0 0 0 10">
+				<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+
+					<TextBlock Grid.Row="0"
+                               Text="STATION CHART"
+                               Foreground="#e83c59"
+                               FontFamily="Consolas"
+                               FontSize="13" FontWeight="Bold"
+                               Margin="0 0 0 8"/>
+
+					<ListView x:Name="LvStations"
+                              Grid.Row="1"
+                              Background="#000810"
+                              Foreground="#d9d7d7"
+                              FontFamily="Consolas"
+                              FontSize="12"
+                              BorderBrush="#e83c59"
+                              BorderThickness="1"
+                              MinHeight="160">
+						<ListView.View>
+							<GridView>
+								<GridViewColumn Header="Station"       Width="110"
+                                                DisplayMemberBinding="{Binding StationName}"/>
+								<GridViewColumn Header="Base (MHz)"    Width="100"
+                                                DisplayMemberBinding="{Binding BaseFrequency}"/>
+								<GridViewColumn Header="Alt (MHz)"     Width="100"
+                                                DisplayMemberBinding="{Binding AlternativeFrequency}"/>
+								<GridViewColumn Header="Travel Info"   Width="90"
+                                                DisplayMemberBinding="{Binding TravelInfoDisplay}"/>
+								<GridViewColumn Header="Radio Text"    Width="220"
+                                                DisplayMemberBinding="{Binding RadioText}"/>
+							</GridView>
+						</ListView.View>
+						<ListView.Resources>
+							<Style TargetType="GridViewColumnHeader">
+								<Setter Property="Background"   Value="#141f3d"/>
+								<Setter Property="Foreground"   Value="#e83c59"/>
+								<Setter Property="FontFamily"   Value="Consolas"/>
+								<Setter Property="FontWeight"   Value="Bold"/>
+								<Setter Property="Padding"      Value="6 4"/>
+								<Setter Property="BorderBrush"  Value="#e83c59"/>
+							</Style>
+							<Style TargetType="ListViewItem">
+								<Setter Property="Foreground"   Value="#d9d7d7"/>
+								<Setter Property="Background"   Value="#000810"/>
+								<Style.Triggers>
+									<Trigger Property="IsMouseOver" Value="True">
+										<Setter Property="Background" Value="#0F3460"/>
+									</Trigger>
+									<Trigger Property="IsSelected" Value="True">
+										<Setter Property="Background" Value="#e83c59"/>
+										<Setter Property="Foreground" Value="White"/>
+									</Trigger>
+								</Style.Triggers>
+							</Style>
+						</ListView.Resources>
+					</ListView>
+
+					<ScrollViewer Grid.Row="1"
+                                  x:Name="ChartScroller"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Auto"
+                                  Visibility="Collapsed"
+                                  Background="#000810">
+						<Canvas x:Name="ChartCanvas"
+                                Background="#000810"
+                                Height="200"/>
+					</ScrollViewer>
+				</Grid>
+			</Border>
+
+			<!-- ══ Row 5: Status bar ═══════════════════════════════════════ -->
+			<Border Grid.Row="5"
+                    Background="#0F3460"
+                    CornerRadius="4"
+                    Padding="10 5">
+				<TextBlock x:Name="TxtStatus"
+                           Text="Ready — Press [Load Stations] to begin."
+                           Foreground="#9c9a9a"
+                           FontFamily="Consolas"
+                           FontSize="11"/>
+			</Border>
+
+		</Grid>
+	</DockPanel>
+</Window>
